@@ -185,6 +185,10 @@ footer a:hover{color:var(--ink)}
   linear-gradient(180deg,rgba(14,17,22,.88) 0%,rgba(14,17,22,.62) 45%,rgba(14,17,22,.92) 100%)}
 @media(max-width:700px){.contact{padding:92px 0}}
 
+.wink{margin-top:44px;border-left:3px solid var(--accent);padding:4px 0 4px 22px;max-width:56em;
+  color:var(--ink-soft);font-size:16px}
+.wink b{color:var(--ink);font-weight:600}
+
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -219,22 +223,9 @@ footer a:hover{color:var(--ink)}
         <p class="hero-note">Kortlopende opdrachten met een afgesproken einddatum. Wij meten ons succes af aan het moment waarop u ons niet meer nodig heeft.</p>
       </div>
 
-      <div class="mock" aria-hidden="true">
-        <div class="mock-top"><i></i><i></i><i></i><span>Directiedashboard - week 4</span></div>
-        <div class="tiles">
-          <div class="tile"><div class="k">Doorlooptijd</div><div class="v">6,2 d</div><div class="d up">-31%</div></div>
-          <div class="tile"><div class="k">Marge</div><div class="v">18,4%</div><div class="d up">+2,1</div></div>
-          <div class="tile"><div class="k">Herwerk</div><div class="v">4,1%</div><div class="d down">+0,6</div></div>
-        </div>
-        <div class="chart">
-          <div class="k">Orders op tijd geleverd</div>
-          <div class="bars">
-            <div style="height:38%"></div><div style="height:52%"></div><div style="height:44%"></div>
-            <div style="height:61%"></div><div style="height:55%"></div><div style="height:72%"></div>
-            <div style="height:68%"></div><div style="height:84%"></div><div class="on" style="height:93%"></div>
-          </div>
-        </div>
-      </div>
+      <figure class="shot hero-shot">
+        <img src="dashboard.webp" alt="Een KPI-dashboard met stuurgetallen en trendlijnen" width="1200" height="900" fetchpriority="high" decoding="async">
+      </figure>
     </div>
   </section>
 
@@ -264,9 +255,22 @@ footer a:hover{color:var(--ink)}
           <h2>Zicht, grip, verbetering. In die volgorde.</h2>
           <p>Wij zijn geen adviesbureau dat een rapport achterlaat. Wij komen kort en zelfstandig binnen, leveren iets werkends op en vertrekken weer.</p>
         </div>
-        <figure class="shot reveal">
-          <img src="dashboard.webp" alt="Een KPI-dashboard met stuurgetallen en trendlijnen" width="1200" height="900" loading="lazy" decoding="async">
-        </figure>
+        <div class="mock reveal" aria-hidden="true">
+          <div class="mock-top"><i></i><i></i><i></i><span>Directiedashboard - week 4</span></div>
+          <div class="tiles">
+            <div class="tile"><div class="k">Doorlooptijd</div><div class="v">6,2 d</div><div class="d up">-31%</div></div>
+            <div class="tile"><div class="k">Marge</div><div class="v">18,4%</div><div class="d up">+2,1</div></div>
+            <div class="tile"><div class="k">Herwerk</div><div class="v">4,1%</div><div class="d down">+0,6</div></div>
+          </div>
+          <div class="chart">
+            <div class="k">Orders op tijd geleverd</div>
+            <div class="bars">
+              <div style="height:38%"></div><div style="height:52%"></div><div style="height:44%"></div>
+              <div style="height:61%"></div><div style="height:55%"></div><div style="height:72%"></div>
+              <div style="height:68%"></div><div style="height:84%"></div><div class="on" style="height:93%"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cards">
         <div class="card reveal">
@@ -297,7 +301,8 @@ footer a:hover{color:var(--ink)}
       </div>
       <div class="prices">
 
-        <div class="price reveal">
+        <div class="price feature reveal">
+          <div class="badge">Ons startpunt</div>
           <div class="step">Stap 1</div>
           <h3>De Scan</h3>
           <div class="dur">2 weken</div>
@@ -308,11 +313,10 @@ footer a:hover{color:var(--ink)}
             <li><b>+</b><span>Concreet voorstel voor wat er als eerste moet gebeuren</span></li>
             <li><b>+</b><span>Vaste prijs, twee weken, daarna weet u waar u aan toe bent</span></li>
           </ul>
-          <div class="foot"><a class="btn ghost" href="#contact">Start met de scan</a></div>
+          <div class="foot"><a class="btn" href="#contact">Start met de scan</a></div>
         </div>
 
-        <div class="price feature reveal">
-          <div class="badge">Ons startpunt</div>
+        <div class="price reveal">
           <div class="step">Stap 2</div>
           <h3>Het Dashboard</h3>
           <div class="dur">1 maand</div>
@@ -323,7 +327,7 @@ footer a:hover{color:var(--ink)}
             <li><b>+</b><span>Afspraken over welke getallen leidend zijn en wie ze onderhoudt</span></li>
             <li><b>+</b><span>Vaste prijs, vaste doorlooptijd, werkend resultaat</span></li>
           </ul>
-          <div class="foot"><a class="btn" href="#contact">Plan een kennismaking</a></div>
+          <div class="foot"><a class="btn ghost" href="#contact">Plan een kennismaking</a></div>
         </div>
 
         <div class="price reveal">
@@ -380,6 +384,10 @@ footer a:hover{color:var(--ink)}
           <a href="https://www.linkedin.com/in/melvindevries/" target="_blank" rel="noopener">LinkedIn &rarr;</a>
         </div>
       </div>
+      <p class="wink reveal"><b>En nee, wij zijn geen commando-eenheid op de vlucht voor de overheid.</b>
+      Wij zitten gewoon in Zwolle, u hoeft ons niet te zoeken en ons busje is een stationwagon. Wat we wel
+      met dat andere team delen: wij komen binnen als het vastloopt, improviseren waar het moet, en
+      verdwijnen zodra het weer draait.</p>
     </div>
   </section>
 
@@ -387,10 +395,10 @@ footer a:hover{color:var(--ink)}
     <img class="bg" src="toren.webp" alt="" width="1280" height="1707" loading="lazy" decoding="async">
     <div class="wrap">
       <div class="kicker">Contact</div>
-      <h2>Begin met een gesprek van een uur.</h2>
-      <p>Vertel ons waar u het overzicht kwijt bent. Wij zeggen eerlijk of wij daar iets aan kunnen doen, en zo niet, dan zeggen we dat ook.</p>
-      <a class="btn" href="mailto:hallo@dteam.nl">hallo@dteam.nl</a>
-      <p class="small">D-Team - Zwolle - actief door heel Nederland</p>
+      <h2>Dertig minuten. Daarna weet u of wij iets voor u kunnen betekenen.</h2>
+      <p>Uw tijd is kostbaar en de onze ook. Daarom beginnen wij liever met een korte kennismaking per video dan met een middag in een vergaderzaal. U schetst waar de sturing hapert, wij zeggen meteen of wij daar iets aan kunnen doen. Zo niet, dan hoort u dat in datzelfde half uur.</p>
+      <a class="btn" href="mailto:hallo@dteam.nl?subject=Kennismaking%20van%2030%20minuten">Plan een videogesprek van 30 minuten</a>
+      <p class="small">Liever eerst even bellen of mailen? hallo@dteam.nl - Zwolle, actief door heel Nederland</p>
     </div>
   </section>
 
