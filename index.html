@@ -152,7 +152,7 @@ h2{font-size:clamp(28px,3.6vw,40px);font-weight:700}
 .member a{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:20px;
   font-size:14px;font-weight:600;text-decoration:none;color:var(--ink-faint)}
 .member a:hover{color:var(--accent-deep)}
-@media(max-width:900px){.team{grid-template-columns:1fr}}.member .photo{aspect-ratio:16/9}}
+@media(max-width:900px){.team{grid-template-columns:1fr}}
 
 /* contact */
 .contact{text-align:center;padding:96px 0}
@@ -166,6 +166,21 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-size:15px;color:var(
 .foot-in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
 footer a{text-decoration:none}
 footer a:hover{color:var(--ink)}
+
+/* beeld */
+.aanpak-top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:52px}
+.aanpak-top .sec-head{margin-bottom:0}
+.shot{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 26px 60px -36px rgba(14,17,22,.6)}
+.shot img{display:block;width:100%;height:auto}
+@media(max-width:900px){.aanpak-top{grid-template-columns:1fr;gap:32px;margin-bottom:36px}}
+
+.contact{position:relative;overflow:hidden;isolation:isolate;padding:132px 0}
+.contact .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 55%;z-index:-2;filter:saturate(.7)}
+.contact::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(14,17,22,.88) 0%,rgba(14,17,22,.62) 45%,rgba(14,17,22,.92) 100%)}
+@media(max-width:700px){.contact{padding:92px 0}}
 
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
@@ -240,10 +255,15 @@ footer a:hover{color:var(--ink)}
 
   <section id="aanpak">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="kicker">Aanpak</div>
-        <h2>Zicht, grip, verbetering. In die volgorde.</h2>
-        <p>Wij zijn geen adviesbureau dat een rapport achterlaat. Wij komen kort en zelfstandig binnen, leveren iets werkends op en vertrekken weer.</p>
+      <div class="aanpak-top">
+        <div class="sec-head reveal">
+          <div class="kicker">Aanpak</div>
+          <h2>Zicht, grip, verbetering. In die volgorde.</h2>
+          <p>Wij zijn geen adviesbureau dat een rapport achterlaat. Wij komen kort en zelfstandig binnen, leveren iets werkends op en vertrekken weer.</p>
+        </div>
+        <figure class="shot reveal">
+          <img src="dashboard.webp" alt="Een KPI-dashboard met stuurgetallen en trendlijnen" width="1200" height="900" loading="lazy" decoding="async">
+        </figure>
       </div>
       <div class="cards">
         <div class="card reveal">
@@ -361,6 +381,7 @@ footer a:hover{color:var(--ink)}
   </section>
 
   <section class="band contact" id="contact">
+    <img class="bg" src="toren.webp" alt="" width="1280" height="1707" loading="lazy" decoding="async">
     <div class="wrap">
       <div class="kicker">Contact</div>
       <h2>Begin met een gesprek van een uur.</h2>
